@@ -7,27 +7,27 @@
   <style>
     /* Your CSS styles here */
     body {
-      background-image: url('paper.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      box-sizing: border-box;
     }
 
     header {
       background-color: #333;
       color: #fff;
-      padding: 20px;
+      padding: 20px 0;
       text-align: center;
-      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
     nav ul {
@@ -45,49 +45,62 @@
       color: #fff;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ccc;
     }
 
     main {
       text-align: center;
-      max-width: 800px;
+      padding: 20px 0;
+      width: 90%;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
     }
 
     section {
       margin-bottom: 40px;
-      padding: 30px;
+      padding: 40px;
       border-radius: 8px;
-      background-color: #f5f5f5;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
     }
 
     h2 {
       color: #333;
-      font-size: 24px;
+      font-size: 28px;
       margin-bottom: 20px;
     }
 
     ul {
       list-style: disc;
       padding-left: 20px;
+      font-size: 18px;
     }
 
     form {
-      max-width: 400px;
-      margin: 0 auto;
+      margin-top: 20px;
       padding: 20px;
       border-radius: 4px;
       background-color: #f5f5f5;
+      width: 90%;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     input,
     textarea {
-      width: 100%;
-      padding: 10px;
+      width: calc(100% - 24px);
+      padding: 12px;
       margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
+      font-size: 16px;
     }
 
     button[type="submit"] {
@@ -97,7 +110,8 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s;
+      font-size: 16px;
     }
 
     button[type="submit"]:hover {
@@ -105,28 +119,108 @@
     }
 
     footer {
-      background-color: #333;
+      background-color: rgba(51, 51, 51, 0.9);
       color: #fff;
-      padding: 20px;
+      padding: 20px 0;
       text-align: center;
       width: 100%;
-      margin-top: 20px;
     }
 
     footer p {
       margin-bottom: 10px;
     }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #ff7a59;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      font-size: 18px;
+    }
+
+    .cta-button:hover {
+      background-color: #ff6143;
+    }
+
+    .download-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      font-size: 18px;
+    }
+
+    .download-button:hover {
+      background-color: #555;
+    }
+
+    .step {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: #ff7a59;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .step-content {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .step-content p {
+      margin-top: 0;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: #333;
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      margin-right: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .social-icons a:hover {
+      background-color: #555;
+    }
   </style>
 </head>
-<body>
+<body style="background-image: url('paper.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
   <header>
     <h1>Welcome to our Cloud Mining Service 🌥️</h1>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -134,7 +228,8 @@
   <main>
     <section id="intro">
       <h2>Unleash the Power of Cloud Mining 🌥️</h2>
-      <p>Embark on an exhilarating journey into the world of cloud mining, where the launch of every new RandomX project opens up exciting opportunities. Join us in the quest to mine innovative cryptocurrencies, fueling the growth of our native token, ZCM. Start your mining adventure today and witness the endless possibilities as we work together to elevate the value of ZCM! 💰</p>
+      <p>Join us in an exhilarating journey into the world of cloud mining, where every new RandomX project opens up exciting opportunities. Start mining innovative cryptocurrencies today and watch as our native token, ZCM, continues to soar in value!</p>
+      <a href="#" class="cta-button">Start Mining Now</a>
     </section>
 
     <section id="features">
@@ -150,17 +245,42 @@
     <section id="faq">
       <h2>Frequently Asked Questions 🤔</h2>
       <ul>
-        <li>How do I start mining with your service?</li>
-          <p><strong>Answer:</strong> To start mining with our service, simply sign up on our website and follow the instructions provided. You'll be guided through the process of setting up your mining software and connecting to our mining pool.</p>
-        <li>What cryptocurrencies can I mine?</li>
-          <p><strong>Answer:</strong> Our service allows you to mine a variety of cryptocurrencies, particularly those utilizing the RandomX algorithm. We continuously add support for new RandomX projects, offering you opportunities to mine innovative cryptocurrencies.</p>
-        <li>How often are mining payouts distributed?</li>
-          <p><strong>Answer:</strong> Mining payouts are distributed every 7 days. Additionally, every 7 days, the coins mined by our community are used to purchase our native token, ZCM, and add liquidity. This strategic approach ensures a continuous increase in the value of ZCM, creating a sustainable ecosystem for all participants.</p>
-        <li>Can I track the value of ZCM token?</li>
-          <p><strong>Answer:</strong> Yes, you can track the value of our native token, ZCM, through various cryptocurrency tracking platforms or directly on our website. We provide real-time updates on the value of ZCM, allowing you to stay informed about its performance in the market.</p>
-        <li>How can I contact your support team?</li>
-          <p><strong>Answer:</strong> You can contact our support team either by joining our Discord server and reaching out to our support team, or by filling out the contact form on our website. Our team is dedicated to assisting you with any questions or issues you may have.</p>
+        <li>How do I start mining with your service? - To start mining, download and install XMRig from the official website, then download our custom configuration file. Open a command prompt or terminal window in the folder containing XMRig and run the following command: ./xmrig.</li>
+        <li>What cryptocurrencies can I mine? - You can mine various cryptocurrencies using our service, including Bitcoin, Ethereum, and Litecoin.</li>
+        <li>How often are mining payouts distributed? - Mining payouts are distributed weekly.</li>
+        <li>Can I track the value of ZCM token? - Yes, you can track the value of ZCM token on our website or through various cryptocurrency tracking platforms.</li>
+        <li>How can I contact your support team? - You can contact our support team by filling out the contact form on our website or joining our Discord server.</li>
       </ul>
+      <p><strong>Payment Note:</strong> Mining payouts are automatically used to purchase ZCM tokens and add liquidity, ensuring continuous growth of ZCM value.</p>
+    </section>
+
+    <section id="how-to-mine">
+      <h2>How to Mine with XMRig</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <p>Download and install XMRig from <a href="#">official website</a>.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <p>Download our custom configuration file.</p>
+          <a href="#" class="download-button">Download XMRig Config</a>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <p>Open a command prompt or terminal window in the folder containing XMRig.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <p>Run the following command to start mining: <code>./xmrig</code></p>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
@@ -178,6 +298,11 @@
   <footer>
     <p>&copy; 2021 Cloud Mining Website. All rights reserved. 📅</p>
     <p>Subscribe to our newsletter for updates! 📬</p>
+    <div class="social-icons">
+      <a href="#" target="_blank">Discord</a>
+      <a href="#" target="_blank">Twitter</a>
+      <a href="#" target="_blank">Telegram</a>
+    </div>
   </footer>
 </body>
 </html>
